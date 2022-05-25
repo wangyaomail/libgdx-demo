@@ -93,11 +93,11 @@ public class Bob {
         if (Gdx.input.isKeyPressed(Keys.A) || leftButton) {
             if (state != JUMP) state = RUN;
             dir = LEFT;
-            accel.x = ACCELERATION * dir;
+            accel.x = 10*ACCELERATION * dir;
         } else if (Gdx.input.isKeyPressed(Keys.D) || rightButton) {
             if (state != JUMP) state = RUN;
             dir = RIGHT;
-            accel.x = ACCELERATION * dir;
+            accel.x = 10*ACCELERATION * dir;
         } else {
             if (state != JUMP) state = IDLE;
             accel.x = 0;

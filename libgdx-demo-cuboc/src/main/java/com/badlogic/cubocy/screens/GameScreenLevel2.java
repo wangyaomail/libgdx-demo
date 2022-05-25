@@ -9,18 +9,18 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.graphics.GL20;
 
-public class GameScreen extends CubocScreen {
+public class GameScreenLevel2 extends CubocScreen {
     Map map;
     MapRenderer renderer;
     OnscreenControlRenderer controlRenderer;
 
-    public GameScreen(Game game) {
+    public GameScreenLevel2(Game game) {
         super(game);
     }
 
     @Override
     public void show() {
-        map = new Map("assets/cjml/" + "data/levels.png");
+        map = new Map("assets/cjml/" + "data/levels2.png");
         renderer = new MapRenderer(map);
         controlRenderer = new OnscreenControlRenderer(map);
     }
@@ -35,8 +35,7 @@ public class GameScreen extends CubocScreen {
         controlRenderer.render();
 
         if (map.bob.bounds.overlaps(map.endDoor.bounds)) {
-//            game.setScreen(new GameOverScreen(game));
-            game.setScreen(new GameScreenLevel2(game));
+            game.setScreen(new GameOverScreen(game));
         }
 
         if (Gdx.input.isKeyPressed(Keys.ESCAPE)) {

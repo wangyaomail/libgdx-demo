@@ -36,6 +36,7 @@ public class Invader extends ModelInstance {
     }
 
     public void update(float delta, float speedMultiplier) {
+        speedMultiplier *= 10;
         movedDistance += delta * INVADER_VELOCITY * speedMultiplier;
         if (state == STATE_MOVE_LEFT) {
             transform.trn(-delta * INVADER_VELOCITY * speedMultiplier, 0, 0);

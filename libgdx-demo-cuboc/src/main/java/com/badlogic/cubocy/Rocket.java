@@ -34,7 +34,7 @@ public class Rocket {
 // if(pos.dst(map.bob.pos) < pos.dst(map.cube.pos)) vel.set(map.bob.pos);
 // else vel.set(map.cube.pos);
             vel.set(map.bob.pos);
-            vel.sub(pos).nor().scl(VELOCITY);
+            vel.sub(pos).nor().scl(VELOCITY*10);
             pos.add(vel.x * deltaTime, vel.y * deltaTime);
             bounds.x = pos.x + 0.2f;
             bounds.y = pos.y + 0.2f;
@@ -68,10 +68,10 @@ public class Rocket {
         }
 
         if (bounds.overlaps(map.bob.bounds)) {
-            if (map.bob.state != Bob.DYING) {
-                map.bob.state = Bob.DYING;
-                map.bob.stateTime = 0;
-            }
+//            if (map.bob.state != Bob.DYING) {
+//                map.bob.state = Bob.DYING;
+//                map.bob.stateTime = 0;
+//            }
             return true;
         }
 
