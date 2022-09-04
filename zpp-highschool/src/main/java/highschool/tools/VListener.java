@@ -1,0 +1,1 @@
+package highschool.tools;import com.badlogic.gdx.graphics.Pixmap;public interface VListener{    Pixmap getFontPixmap(String txt, FreePaint vpaint);}
