@@ -16,7 +16,6 @@
         <module>libgdx-demo-superjumper</module>
         <module>libgdx-demo-vector-pinball</module>
         <module>libgdx-demo-very-angry-robots</module>
-        <module>zpp-highschool</module>
     </modules>
 
     <properties>
