@@ -102,7 +102,8 @@ public class Invaders extends Game {
         Controllers.addListener(controllerListener);
 
         setScreen(new MainMenu(this));
-        music = Gdx.audio.newMusic(Gdx.files.getFileHandle("assets/invaders/" + "data/8.12.mp3", FileType.Internal));
+//        music = Gdx.audio.newMusic(Gdx.files.getFileHandle("assets/invaders/" + "data/8.12.mp3", FileType.Internal));
+        music = Gdx.audio.newMusic(Gdx.files.getFileHandle("assets/var/data/sounds/buzz01.ogg", FileType.Internal));
         music.setLooping(true);
         music.play();
         Gdx.input.setInputProcessor(new InputAdapter() {

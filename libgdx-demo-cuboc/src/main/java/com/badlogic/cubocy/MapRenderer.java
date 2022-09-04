@@ -91,6 +91,8 @@ public class MapRenderer {
         bobJumpLeft = new Animation(0.1f, mirror[2], mirror[3]);
         bobIdleRight = new Animation(0.5f, split[0], split[4]);
         bobIdleLeft = new Animation(0.5f, mirror[0], mirror[4]);
+
+
         bobDead = new Animation(0.2f, split[0]);
         split = new TextureRegion(bobTexture).split(20, 20)[1];
         cube = split[0];
@@ -103,6 +105,18 @@ public class MapRenderer {
         split = new TextureRegion(bobTexture).split(20, 20)[3];
         rocket = new Animation(0.1f, split[0], split[1], split[2], split[3]);
         rocketPad = split[4];
+
+
+        TextureRegion[] mirror2 = new TextureRegion(bobTexture).split(20, 20)[3];
+        for (TextureRegion region : mirror2)
+            region.flip(true, false);
+        bobRight = new Animation(0.1f, split[0], split[2]);
+        bobLeft = new Animation(0.1f, mirror2[0], mirror2[2]);
+        bobJumpRight = new Animation(0.1f, split[0], split[3]);
+        bobJumpLeft = new Animation(0.1f, mirror2[2], mirror2[3]);
+        bobIdleRight = new Animation(0.5f, split[0], split[0]);
+        bobIdleLeft = new Animation(0.5f, mirror2[0], mirror2[0]);
+
         split = new TextureRegion(bobTexture).split(20, 20)[4];
         rocketExplosion = new Animation(0.1f, split[0], split[1], split[2], split[3], split[4], split[4]);
         split = new TextureRegion(bobTexture).split(20, 20)[5];

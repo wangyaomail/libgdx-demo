@@ -83,15 +83,15 @@ public class MovingSpikes {
         bounds.y = pos.y;
 
         if (map.bob.bounds.overlaps(bounds)) {
-            if (map.bob.state != Bob.DYING) {
-                map.bob.state = Bob.DYING;
-                map.bob.stateTime = 0;
-            }
+//            if (map.bob.state != Bob.DYING) {
+//                map.bob.state = Bob.DYING;
+//                map.bob.stateTime = 0;
+//            }
         }
 
         if (map.cube.bounds.overlaps(bounds)) {
-            map.cube.state = Cube.DEAD;
-            map.cube.stateTime = 0;
+//            map.cube.state = Cube.DEAD;
+//            map.cube.stateTime = 0;
         }
     }
 }

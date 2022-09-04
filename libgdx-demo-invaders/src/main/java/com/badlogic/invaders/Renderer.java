@@ -94,7 +94,8 @@ public class Renderer {
             spriteBatch = new SpriteBatch();
             modelBatch = new ModelBatch();
 
-            backgroundTexture = new Texture(Gdx.files.internal("assets/invaders/" + "data/planet.jpg"), Format.RGB565, true);
+//            backgroundTexture = new Texture(Gdx.files.internal("assets/invaders/" + "data/planet.jpg"), Format.RGB565, true);
+            backgroundTexture = new Texture(Gdx.files.internal("assets/sj/"+"data/background.png"), Format.RGB565, true);
             backgroundTexture.setFilter(TextureFilter.MipMap, TextureFilter.Linear);
 
             font = new BitmapFont(Gdx.files.internal("assets/invaders/" + "data/font10.fnt"), Gdx.files.internal("assets/invaders/" + "data/font10.png"), false);

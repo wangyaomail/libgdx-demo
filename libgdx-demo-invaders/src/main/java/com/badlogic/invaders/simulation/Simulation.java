@@ -76,7 +76,9 @@ public class Simulation implements Disposable {
         blockModel = objLoader.loadModel(Gdx.files.internal("assets/invaders/" + "data/block.obj"));
         shotModel = objLoader.loadModel(Gdx.files.internal("assets/invaders/" + "data/shot.obj"));
 
-        final Texture shipTexture = new Texture(Gdx.files.internal("assets/invaders/" + "data/ship.png"), Format.RGB565, true);
+        //assets/pb/data/sprites/factoryp1.png
+//        final Texture shipTexture = new Texture(Gdx.files.internal("assets/invaders/" + "data/ship.png"), Format.RGB565, true);
+        final Texture shipTexture = new Texture(Gdx.files.internal("assets/pb/data/sprites/factoryp1.png"), Format.RGB565, true);
         shipTexture.setFilter(TextureFilter.MipMap, TextureFilter.Linear);
         final Texture invaderTexture = new Texture(Gdx.files.internal("assets/invaders/" + "data/invader.png"), Format.RGB565, true);
         invaderTexture.setFilter(TextureFilter.MipMap, TextureFilter.Linear);

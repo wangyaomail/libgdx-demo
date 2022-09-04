@@ -26,12 +26,12 @@ public class Map {
     Array<Laser> lasers = new Array<Laser>();
     public EndDoor endDoor;
 
-    public Map () {
-        loadBinary();
+    public Map(String mapPath) {
+        loadBinary(mapPath);
     }
 
-    private void loadBinary () {
-        Pixmap pixmap = new Pixmap(Gdx.files.internal("assets/cjml/"+"data/levels.png"));
+    private void loadBinary(String mapPath) {
+        Pixmap pixmap = new Pixmap(Gdx.files.internal(mapPath));
         tiles = new int[pixmap.getWidth()][pixmap.getHeight()];
         for (int y = 0; y < 35; y++) {
             for (int x = 0; x < 150; x++) {
@@ -70,11 +70,11 @@ public class Map {
         }
     }
 
-    boolean match (int src, int dst) {
+    boolean match(int src, int dst) {
         return src == dst;
     }
 
-    public void update (float deltaTime) {
+    public void update(float deltaTime) {
         bob.update(deltaTime);
         if (bob.state == Bob.DEAD) bob = new Bob(this, activeDispenser.bounds.x, activeDispenser.bounds.y);
         cube.update(deltaTime);
@@ -97,7 +97,7 @@ public class Map {
         }
     }
 
-    public boolean isDeadly (int tileId) {
+    public boolean isDeadly(int tileId) {
         return tileId == SPIKES;
     }
 }

@@ -143,6 +143,7 @@ public class Laser {
                 }
             }
         }
+        kill=false;
 
         if (kill && map.bob.state != Bob.DYING) {
             map.bob.state = Bob.DYING;

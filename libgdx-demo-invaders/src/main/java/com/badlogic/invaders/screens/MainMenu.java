@@ -67,7 +67,8 @@ public class MainMenu extends InvadersScreen {
         super(invaders);
 
         spriteBatch = new SpriteBatch();
-        background = new Texture(Gdx.files.internal("assets/invaders/"+"data/planet.jpg"));
+//        background = new Texture(Gdx.files.internal("assets/invaders/"+"data/planet.jpg"));
+        background = new Texture(Gdx.files.internal("assets/sj/"+"data/background.png"));
         background.setFilter(TextureFilter.Linear, TextureFilter.Linear);
 
         logo = new Texture(Gdx.files.internal("assets/invaders/"+"data/title.png"));
